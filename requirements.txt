@@ -1,8 +1,8 @@
-easyocr
 streamlit
 time
 numpy
-pillow
+Pillow
 unittest
 pythainlp
 editdistance
+easyocr
