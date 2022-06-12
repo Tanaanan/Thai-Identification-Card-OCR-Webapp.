@@ -2,7 +2,7 @@ easyocr
 streamlit
 time
 numpy
-Pillow
+pillow
 unittest
 pythainlp
 editdistance
