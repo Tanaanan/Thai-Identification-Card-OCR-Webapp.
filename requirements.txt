@@ -1,7 +1,6 @@
 streamlit
-numpy
-Pillow
-unittest
-pythainlp
-editdistance
-easyocr
+numpy==1.14.5
+Pillow==9.1.1
+pythainlp==3.0.8
+editdistance==0.5.3
+easyocr==1.5.0
