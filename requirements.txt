@@ -1,0 +1,8 @@
+easyocr
+streamlit
+time
+numpy
+Pillow
+unittest
+pythainlp
+editdistance
