@@ -70,7 +70,6 @@ def Get_Idcard_detail(file_path):
   name = file_path
   img = Image.open(name)
   img = ImageOps.exif_transpose(img) # fix image rotating
-  st.write(img.size)
 
   width, height = img.size # get img_input size
   if (width == 1280) and (height == 1280):
@@ -85,7 +84,6 @@ def Get_Idcard_detail(file_path):
     new_im.paste(img, ((1280-new_size[0])//2,
                         (1280-new_size[1])//2))
   
-  st.write(new_im.size)
   
   result = reader.readtext(np.array(new_im))
 
