@@ -1,17 +1,11 @@
 import easyocr as ocr  #OCR
 import streamlit as st  #Web App
 from PIL import Image, ImageOps #Image Processing
-import numpy as np #Image Processing 
 import time
-from asyncore import read
-from json import load
-from types import MethodWrapperType
 from unittest import result
-import pandas as pd
 import editdistance
-import os
-import requests
 from pythainlp.util import isthai
+import numpy as np
 
 st.title("ATK-OCR detection (AOC) Webapp.")
 
@@ -76,8 +70,24 @@ def Get_Idcard_detail(file_path):
   name = file_path
   img = Image.open(name)
   img = ImageOps.exif_transpose(img) # fix image rotating
+  st.write(img.size)
+
+  width, height = img.size # get img_input size
+  if (width == 1280) and (height == 1280):
+    new_im = img
+  else:
+    #im = im.convert('L') #Convert to gray
+    old_size = img.size  # old_size[0] is in (width, height) format
+    ratio = float(1280)/max(old_size)
+    new_size = tuple([int(x*ratio) for x in old_size])
+    img = img.resize(new_size, Image.ANTIALIAS)
+    new_im = Image.new("RGB", (1280, 1280))
+    new_im.paste(img, ((1280-new_size[0])//2,
+                        (1280-new_size[1])//2))
   
-  result = reader.readtext(np.array(img))
+  st.write(new_im.size)
+  
+  result = reader.readtext(np.array(new_im))
 
   result_text = [] #empty list for results
   for text in result:
