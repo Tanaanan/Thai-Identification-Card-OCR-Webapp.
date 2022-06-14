@@ -1,7 +1,6 @@
 streamlit
-easyocr==1.5.0
-pythainlp==3.0.8
-numpy
 Pillow
-editdistance
-
+setuptools==59.5.0
+icevision[all]
+torch==1.10.0+cpu
+torchvision==0.11.1+cpu
