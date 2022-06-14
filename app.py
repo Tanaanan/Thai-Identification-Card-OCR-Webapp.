@@ -73,7 +73,7 @@ def Get_Idcard_detail(file_path):
 
   width, height = img.size # get img_input size
   if (width == 1280) and (height == 1280):
-    new_im = img
+    result = reader.readtext(np.array(img))
   else:
     #im = im.convert('L') #Convert to gray
     old_size = img.size  # old_size[0] is in (width, height) format
@@ -83,9 +83,11 @@ def Get_Idcard_detail(file_path):
     new_im = Image.new("RGB", (1280, 1280))
     new_im.paste(img, ((1280-new_size[0])//2,
                         (1280-new_size[1])//2))
+    
+    result = reader.readtext(np.array(new_im))
 
 
-  result = reader.readtext(np.array(new_im))
+  
 
   result_text = [] #empty list for results
   for text in result:
