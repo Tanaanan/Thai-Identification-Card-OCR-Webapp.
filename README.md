@@ -5,3 +5,5 @@ Deploy on streamlit app
 - Identification number (13digit)
 
 Link : https://share.streamlit.io/tanaanan/idcard_ocr-deploy/main/app.py
+**This project has been supported by AI Builders : https://ai-builders.github.io/
+By Tanaanan .M
