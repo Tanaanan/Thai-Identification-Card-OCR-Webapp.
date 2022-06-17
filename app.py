@@ -7,15 +7,15 @@ import editdistance
 from pythainlp.util import isthai
 import numpy as np
 
-st.title("ATK-OCR detection (AOC) Webapp.")
+st.title("Idcard detection (OCR) Webapp.")
 
 #subtitle
-st.markdown("## Antigen test kit + Identification Card detector.")
+st.markdown("Identification Card detector.")
 
 st.markdown("")
 
 #image uploader
-image = st.file_uploader(label = "upload ATK + Idcard img here.. OwO",type=['png','jpg','jpeg'])
+image = st.file_uploader(label = "upload Idcard img here.. OwO",type=['png','jpg','jpeg'])
 
 
 @st.cache
