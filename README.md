@@ -1,4 +1,4 @@
-# Identification Card (OCR)
+# Thai-Identification Card (OCR)
 Deploy on streamlit app
 
 - Name, Lastname (Eng)
