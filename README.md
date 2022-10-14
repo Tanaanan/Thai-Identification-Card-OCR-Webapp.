@@ -7,6 +7,7 @@ Feature
 - detect Identification number (13digit)
 
 Deploy Link (Huggingface space) : https://huggingface.co/spaces/Tanaanan/Thai-Identification-Card_OCR_Webapp
+
 Deploy Link (Streamlit Cloud) : https://share.streamlit.io/tanaanan/idcard_ocr-deploy/main/app.py
 
 
